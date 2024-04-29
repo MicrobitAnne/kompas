@@ -1,6 +1,7 @@
+let kompas = input.compassHeading()
 basic.forever(function () {
-    let kompas = 0
-    if (kompas >= 315 && kompas <= 45) {
+    if (kompas > 315 || kompas < 45) {
+        kompas += 90
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -9,7 +10,8 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if (kompas >= 45 && kompas <= 135) {
+    if (kompas > 45 || kompas < 135) {
+        kompas += 90
         basic.showLeds(`
             . . # . .
             . # . . .
@@ -18,7 +20,8 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if (kompas >= 135 && kompas <= 225) {
+    if (kompas > 135 || kompas < 225) {
+        kompas += 90
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -27,7 +30,8 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if (kompas >= 225 && kompas <= 45) {
+    if (kompas > 225 || kompas < 45) {
+        kompas += 90
         basic.showLeds(`
             . . # . .
             . . . # .
